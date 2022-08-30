@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Monster Slayer</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main_part">
+        <div class="title">Monster Slayer</div>
+        <div class="group">
+          <h3 class="sub_title">Monster Health</h3>
+          <div class="monster_bar">
+            <div class="monster_bar_value"></div>
+          </div>
+        </div>
+        <div class="group">
+          <h3 class="sub_title">Your Health</h3>
+          <div class="player_bar">
+            <div class="player_bar_value"></div>
+          </div>
+        </div>
+      </section>
+      <section class="control_part">
+        <button class="btn">Attack</button>
+        <button class="btn">Special attack</button>
+        <button class="btn">Heal</button>
+        <button class="btn">Surrender</button>
+      </section>
+      <section class="battle_log">
+        <h3 class="log">Battle Log</h3>
+        <ul class="log_list">
+          <li></li>
+        </ul>
+      </section>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

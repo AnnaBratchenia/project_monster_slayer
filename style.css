@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  height: auto;
+  border: 2px solid rgba(0, 0, 0, 0.171);
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: white;
+  background-color: rgba(231, 34, 34, 0.699);
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}
+.group {
+  width: 550px;
+  height: auto;
+  border: 1px solid 0 0 0 0 rgba(0, 0, 0, 0.322);
+  border-radius: 5px;
+  margin: 20px 30px;
+  padding: 20px 0;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.sub_title {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+.monster_bar {
+  width: 500px;
+  height: 50px;
+  background-color: #db87d7;
+  margin: 0 auto;
+}
+.monster_bar_value {
+  width: 500px;
+  height: 50px;
+  background-color: #8edaa5;
+  margin: 0 auto;
+}
+.player_bar {
+  width: 500px;
+  height: 50px;
+  background-color: #db87d7;
+  margin: 0 auto;
+}
+.player_bar_value {
+  width: 500px;
+  height: 50px;
+  background-color: #8edaa5;
+  margin: 0 auto;
+}
+.control_part {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  color: white;
+  background-color: #8a1717;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 15px 30px;
+  margin: 15px auto;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.log {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+.log_list {
+  list-style: none;
+}
