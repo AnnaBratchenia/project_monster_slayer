@@ -13,24 +13,30 @@
     <title>Monster Slayer</title>
   </head>
   <body>
-    <div class="container">
+    <div class="game">
       <section class="main_part">
         <div class="title">Monster Slayer</div>
         <div class="group">
           <h3 class="sub_title">Monster Health</h3>
           <div class="monster_bar">
-            <div class="monster_bar_value"></div>
+            <div
+              class="monster_bar_value"
+              v-bind:style="{width: monsterHealthValue+ '%' }"
+            ></div>
           </div>
         </div>
         <div class="group">
           <h3 class="sub_title">Your Health</h3>
           <div class="player_bar">
-            <div class="player_bar_value"></div>
+            <div
+              class="player_bar_value"
+              v-bind:style="{width: playerHealthValue+ '%' }"
+            ></div>
           </div>
         </div>
       </section>
       <section class="control_part">
-        <button class="btn">Attack</button>
+        <button v-on:click="addMonsterAttack" class="btn">Attack</button>
         <button class="btn">Special attack</button>
         <button class="btn">Heal</button>
         <button class="btn">Surrender</button>
