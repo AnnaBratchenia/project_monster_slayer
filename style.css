@@ -119,13 +119,15 @@ button:disabled {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.actionBy {
-  color: #8a1717;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
+.action--player {
+  color: #9e58c7;
 }
-.actionValue {
-  color: #6b0c0c;
-  font-size: 24px;
+.action--monster {
+  color: #4f92d1;
+}
+.action--heal {
+  color: #1dd479;
+}
+.action--attack {
+  color: #df0712;
 }

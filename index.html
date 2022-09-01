@@ -59,9 +59,22 @@
         <h3 class="log">Battle Log</h3>
         <ul class="log_list">
           <li v-for="logMessage in logMessages">
-            <span class="action actionBy">{{logMessage.actionBy}}</span>
-            <span class="action actionType">{{logMessage.actionType}}</span>
-            <span class="action actionValue">{{logMessage.actionValue}}</span>
+            <span
+              v-bind:class="{'action--player': logMessage.actionBy==='player',
+          'action--monster': logMessage.actionBy === 'monster'    
+            }"
+              >{{logMessage.actionBy==='player'? 'Player': 'Monster'}}</span
+            >
+            <span v-if="logMessage.actionType==='heal'">
+              heals himself for
+              <span class="action--heal">{{logMessage.actionValue}}</span>
+            </span>
+            <span v-else class="action">
+              attack and deals
+              <span class="action--attack"
+                >{{logMessage.actionValue}}</span
+              ></span
+            >
           </li>
         </ul>
       </section>
