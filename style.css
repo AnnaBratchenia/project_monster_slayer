@@ -81,6 +81,9 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+button:disabled {
+  background-color: blue;
+}
 .log {
   font-family: "Roboto", sans-serif;
   font-size: 36px;

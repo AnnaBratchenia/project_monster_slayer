@@ -21,24 +21,33 @@
           <div class="monster_bar">
             <div
               class="monster_bar_value"
-              v-bind:style="{width: monsterHealthValue+ '%' }"
+              v-bind:style="monsterBarStyles"
             ></div>
           </div>
         </div>
         <div class="group">
           <h3 class="sub_title">Your Health</h3>
           <div class="player_bar">
-            <div
-              class="player_bar_value"
-              v-bind:style="{width: playerHealthValue+ '%' }"
-            ></div>
+            <div class="player_bar_value" v-bind:style="playerBarStyles"></div>
           </div>
         </div>
       </section>
+      <section class="game_over" v-if="winner">
+        <h2>Game over!</h2>
+        <h3 v-if="winner=='monster'">You lost!</h3>
+        <h3 v-else-if="winner=='player'">You won!</h3>
+        <h3 v-else="winner=='draw'">It's a draw!</h3>
+      </section>
       <section class="control_part">
         <button v-on:click="addMonsterAttack" class="btn">Attack</button>
-        <button class="btn">Special attack</button>
-        <button class="btn">Heal</button>
+        <button
+          :disabled="mayUseSpecialAttack"
+          v-on:click="addSpecialAttack"
+          class="btn"
+        >
+          Special attack
+        </button>
+        <button v-on:click="addHeal" class="btn">Heal</button>
         <button class="btn">Surrender</button>
       </section>
       <section class="battle_log">
