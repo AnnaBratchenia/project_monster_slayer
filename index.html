@@ -33,10 +33,15 @@
         </div>
       </section>
       <section class="game_over" v-if="winner">
-        <h2>Game over!</h2>
-        <h3 v-if="winner=='monster'">You lost!</h3>
-        <h3 v-else-if="winner=='player'">You won!</h3>
-        <h3 v-else="winner=='draw'">It's a draw!</h3>
+        <h2 class="game_over_title">Game over!</h2>
+        <h3 class="game_over_subtitle" v-if="winner==='monster'">You lost!</h3>
+        <h3 class="game_over_subtitle" v-else-if="winner==='player'">
+          You won!
+        </h3>
+        <h3 class="game_over_subtitle" v-else="winner=='draw'">It's a draw!</h3>
+        <button v-on:click="startGame" class="btn btn_start">
+          Start new game
+        </button>
       </section>
       <section class="control_part">
         <button v-on:click="addMonsterAttack" class="btn">Attack</button>
@@ -48,12 +53,16 @@
           Special attack
         </button>
         <button v-on:click="addHeal" class="btn">Heal</button>
-        <button class="btn">Surrender</button>
+        <button v-on:click="addSurrender" class="btn">Surrender</button>
       </section>
       <section class="battle_log">
         <h3 class="log">Battle Log</h3>
         <ul class="log_list">
-          <li></li>
+          <li v-for="logMessage in logMessages">
+            <span class="action actionBy">{{logMessage.actionBy}}</span>
+            <span class="action actionType">{{logMessage.actionType}}</span>
+            <span class="action actionValue">{{logMessage.actionValue}}</span>
+          </li>
         </ul>
       </section>
     </div>
